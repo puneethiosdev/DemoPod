@@ -13,8 +13,8 @@
 		C401FAAE767D1CB53A2D54E6C19D34F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		C43D50AFA1838F91D2DBA74AEC5CDF25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		C78FF93399EC0C8E9E49D8CEAE4F4210 /* DemoPod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A6736C173E3F0CA621467C1C89F71A /* DemoPod-dummy.m */; };
-		CEEF4290BD98B38E27574EF031C95E46 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F3575A2A28818C5B050FCEF4D029C /* ReplaceMe.swift */; };
 		DDF7F77DEDC9AED04FCEDE5F8330BDA4 /* Pods-DemoPod_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99B37D8F71951EF0BD20D07074A3E233 /* Pods-DemoPod_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF8012E321ABE86500DFDC61 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8012E221ABE86500DFDC61 /* UIImageExtensions.swift */; };
 		E096EA609E47F673965638A85E7CDC89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		F43819F0701663A723797D7A83B28DAF /* Pods-DemoPod_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 323E0FFFAF3720B815375339D98F297C /* Pods-DemoPod_Example-dummy.m */; };
 /* End PBXBuildFile section */
@@ -69,7 +69,7 @@
 		C05940344E6FB9BE1081E4F3D17769F1 /* Pods_DemoPod_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoPod_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C451EF63C9F1F9D9297CF184B6932FDE /* Pods-DemoPod_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DemoPod_Tests.modulemap"; sourceTree = "<group>"; };
 		D1633F47C942E11880CDF8890E73F676 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE4F3575A2A28818C5B050FCEF4D029C /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = DemoPod/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		DF8012E221ABE86500DFDC61 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		EBB7D60C41D751C3FF37FEBE5A523278 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68953B941D8A5F29962C15089F8A3F7 /* Pods-DemoPod_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DemoPod_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +123,7 @@
 		40EA28BE6F0F087E05C5258CC7E1B7E1 /* DemoPod */ = {
 			isa = PBXGroup;
 			children = (
-				DE4F3575A2A28818C5B050FCEF4D029C /* ReplaceMe.swift */,
+				DF8012E221ABE86500DFDC61 /* UIImageExtensions.swift */,
 				9C3C7B39AD04FBBA6A99E648F5DBFE1D /* Pod */,
 				C2AEA658A931A1FBEB97B8635CF52797 /* Support Files */,
 			);
@@ -320,7 +320,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1010;
+				TargetAttributes = {
+					E023601E2A5AD012CA539C8F64384B22 = {
+						LastSwiftMigration = 1010;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -387,7 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C78FF93399EC0C8E9E49D8CEAE4F4210 /* DemoPod-dummy.m in Sources */,
-				CEEF4290BD98B38E27574EF031C95E46 /* ReplaceMe.swift in Sources */,
+				DF8012E321ABE86500DFDC61 /* UIImageExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A679914442462568EE503D4EC8560531 /* DemoPod.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -481,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A679914442462568EE503D4EC8560531 /* DemoPod.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -599,6 +606,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
